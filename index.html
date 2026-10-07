@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="A responsive JavaScript To-Do List demonstrating DOM manipulation, CRUD operations, state management, filtering, event delegation, and localStorage." name="description"/>
+  <title>
+   To-Do List | JavaScript State Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="script.js">
+  </script>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="To-Do List home" class="brand" href="#">
+     <span aria-hidden="true" class="brand-mark">
+      ✓
+     </span>
+     <span>
+      TaskFlow
+     </span>
+    </a>
+    <button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" id="theme-toggle" type="button">
+     <span aria-hidden="true">
+      ☾
+     </span>
+     <span class="theme-label">
+      Dark mode
+     </span>
+    </button>
+   </div>
+  </header>
+  <main class="app-shell">
+   <section aria-labelledby="page-title" class="hero">
+    <p class="eyebrow">
+     Interactive Task Manager
+    </p>
+    <h1 id="page-title">
+     Turn plans into progress.
+    </h1>
+    <p class="intro">
+     A simple task manager powered by JavaScript state, the DOM, and browser storage.
+    </p>
+   </section>
+   <section aria-labelledby="todo-heading" class="todo-card">
+    <div class="card-heading">
+     <div>
+      <p class="section-kicker">
+       Your workspace
+      </p>
+      <h2 id="todo-heading">
+       Today's tasks
+      </h2>
+     </div>
+     <p aria-live="polite" class="task-count" id="task-count">
+      0 tasks
+     </p>
+    </div>
+    <form class="task-form" id="task-form">
+     <div class="input-wrap">
+      <label for="task-input">
+       New task
+      </label>
+      <input aria-describedby="form-message" autocomplete="off" id="task-input" maxlength="120" name="task" placeholder="What needs to be done?" required="" type="text"/>
+     </div>
+     <button class="primary-button" type="submit">
+      Add task
+     </button>
+    </form>
+    <p aria-live="polite" class="form-message" id="form-message" role="status">
+    </p>
+    <div class="toolbar">
+     <div aria-label="Filter tasks" class="filters" role="group">
+      <button aria-pressed="true" class="filter-button is-active" data-filter="all" type="button">
+       All
+      </button>
+      <button aria-pressed="false" class="filter-button" data-filter="active" type="button">
+       Active
+      </button>
+      <button aria-pressed="false" class="filter-button" data-filter="completed" type="button">
+       Completed
+      </button>
+     </div>
+     <button class="text-button" id="clear-completed" type="button">
+      Clear completed
+     </button>
+    </div>
+    <div class="list-area">
+     <p class="empty-state" id="empty-state">
+      <span aria-hidden="true" class="empty-icon">
+       ✓
+      </span>
+      <strong id="empty-title">
+       No tasks yet
+      </strong>
+      <span id="empty-description">
+       Add your first task above and start making progress.
+      </span>
+     </p>
+     <ul aria-label="Tasks" class="task-list" id="task-list">
+     </ul>
+    </div>
+   </section>
+ </body>
+</html>
